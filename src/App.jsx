@@ -1,5 +1,11 @@
+import Home from "./Pages/Home";
+
 function App() {
-  return <div>Netflix</div>;
+  return (
+    <div>
+      <Home />
+    </div>
+  );
 }
 
 export default App;
