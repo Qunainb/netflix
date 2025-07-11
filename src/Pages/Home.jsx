@@ -1,3 +1,4 @@
+import Footer from "../Components/Footer";
 import HeroSection from "../Components/HeroSection";
 import Navbar from "../Components/Navbar";
 import TitleCard from "../Components/TitleCard";
@@ -13,6 +14,7 @@ export default function Home() {
         <TitleCard title="Upcoming" />
         <TitleCard title="Top Picks For You" />
       </div>
+      <Footer />
     </div>
   );
 }
