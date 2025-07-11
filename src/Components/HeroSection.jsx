@@ -4,6 +4,7 @@ import playIcon from "../assets/play_icon.png";
 import infoIcon from "../assets/info_icon.png";
 
 import "../Components/HeroSection.css";
+import TitleCard from "./TitleCard";
 
 export default function HeroSection() {
   return (
@@ -26,6 +27,7 @@ export default function HeroSection() {
             More Info
           </button>
         </div>
+        <TitleCard />
       </div>
     </div>
   );
