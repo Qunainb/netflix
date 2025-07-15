@@ -1,0 +1,106 @@
+.login {
+  height: 100vh;
+  background-image: linear-gradient(#0000007e, #0000007e),
+    url("../assets/background_banner.jpg");
+  padding: 20px 8%;
+}
+
+.login-logo {
+  width: 150px;
+}
+
+.login-form {
+  background-color: rgb(0, 0, 0, 0.75);
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 60px;
+  border-radius: 6px;
+}
+
+.login-form h1 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.login-form input {
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  color: white;
+  margin: 12px 0;
+  border: 0;
+  outline: 0;
+  padding: 16px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.login-form input:focus {
+  outline: 1px solid white;
+}
+
+.login-form button {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: #e50914;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.form-help {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #b3b3b3;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.remember input {
+  width: 18px;
+  height: 18px;
+  outline: 0;
+  border: none;
+}
+
+.remember input:checked {
+  outline: 0;
+  border: none;
+}
+
+.form-help p {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form-switch {
+  margin-top: 25px;
+  color: #737373;
+}
+
+.form-switch p {
+  margin-bottom: 5px;
+}
+
+.form-switch span {
+  margin-left: 8px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+}
