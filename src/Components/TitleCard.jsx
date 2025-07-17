@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import cards_data from "../Cards_data";
 
 import "../Components/TitleCard.css";
+import Modal from "./Modal";
 
 export default function TitleCard({ title, category }) {
   const [movies, setMovies] = useState([]);
+  const [selectedMovies, setSelectedMovies] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     async function fetchMovies() {
@@ -23,14 +25,26 @@ export default function TitleCard({ title, category }) {
     }
 
     fetchMovies();
-  }, []);
+  }, [category]);
 
   return (
     <div className="title-cards">
+      <Modal
+        isModalOpen={isModalOpen}
+        selectedMovies={selectedMovies}
+        setIsModalOpen={setIsModalOpen}
+      />
       <h2>{title ? title : "Popular On Netflix"}</h2>
       <div className="card-list">
         {movies.map((movie, index) => (
-          <div className="card" key={index}>
+          <div
+            className="card"
+            key={index}
+            onClick={() => {
+              setSelectedMovies(movie);
+              setIsModalOpen(true);
+            }}
+          >
             <img
               src={`https://image.tmdb.org/t/p/w500` + movie.backdrop_path}
             />
