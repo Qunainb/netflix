@@ -8,7 +8,7 @@ import "../Components/Navbar.css";
 
 export default function Navbar() {
   return (
-    <nav className="navbar">
+    <div className="navbar">
       <div className="navbar-left">
         <img src={logo} alt="netflix-logo" />
         <ul>
@@ -32,6 +32,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
 }
