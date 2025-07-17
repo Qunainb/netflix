@@ -1,14 +1,27 @@
-import logo from "../assets/logo.png";
-import searchIcon from "../assets/search_icon.svg";
-import bellIcon from "../assets/bell_icon.svg";
-import profileImage from "../assets/profile_img.png";
-import dropDown from "../assets/caret_icon.svg";
+import logo from "../../../assets/logo.png";
+import searchIcon from "../../../assets/search_icon.svg";
+import bellIcon from "../../../assets/bell_icon.svg";
+import profileImage from "../../../assets/profile_img.png";
+import dropDown from "../../../assets/caret_icon.svg";
 
 import "../Components/Navbar.css";
+import { useEffect, useRef } from "react";
 
 export default function Navbar() {
+  const navRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 80) {
+        navRef.current.classList.add("nav-dark");
+      } else {
+        navRef.current.classList.remove("nav-dark");
+      }
+    });
+  }, []);
+
   return (
-    <div className="navbar">
+    <div ref={navRef} className="navbar">
       <div className="navbar-left">
         <img src={logo} alt="netflix-logo" />
         <ul>

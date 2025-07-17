@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import "../Components/TitleCard.css";
+import "./TitleCard.css";
 import Modal from "./Modal";
 
 export default function TitleCard({ title, category }) {

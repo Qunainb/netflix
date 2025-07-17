@@ -1,4 +1,4 @@
-import "../Components/Modal.css";
+import "./Modal.css";
 
 export default function Modal({ isModalOpen, selectedMovies, setIsModalOpen }) {
   return (
